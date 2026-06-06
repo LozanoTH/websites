@@ -73,9 +73,11 @@ $('#formDatos').addEventListener('submit', async (e) => {
     data[c.id] = el.value.trim();
   });
 
+  const ahora = Date.now();
   data.fecha = fechaLocal();
+  data.expiracion = ahora + 86400000;
 
-  const key = `registro_${Date.now()}`;
+  const key = `registro_${ahora}`;
   await fbPut(`/mensajes/${id}/${key}`, data);
   $('#formDatos').reset();
 });
