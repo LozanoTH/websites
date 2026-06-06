@@ -56,14 +56,6 @@ function renderForm() {
   });
 }
 
-function mostrarResultado(timestamp) {
-  const card = $('#resultCard');
-  $('#resultMsg').textContent = `Registrado el ${timestamp}`;
-  $('#formDatos').reset();
-  card.classList.remove('hidden');
-  card.scrollIntoView({ behavior: 'smooth' });
-}
-
 $('#formDatos').addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -81,12 +73,11 @@ $('#formDatos').addEventListener('submit', async (e) => {
     data[c.id] = el.value.trim();
   });
 
-  const timestamp = fechaLocal();
-  data.fecha = timestamp;
+  data.fecha = fechaLocal();
 
   const key = `registro_${Date.now()}`;
   await fbPut(`/mensajes/${id}/${key}`, data);
-  mostrarResultado(timestamp);
+  $('#formDatos').reset();
 });
 
 renderForm();
