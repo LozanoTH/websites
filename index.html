@@ -3,25 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario Inteligente</title>
+  <title>Formulario</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div id="app">
-    <!-- HEADER -->
     <header>
-      <h1>Formulario Inteligente</h1>
-      <div class="header-actions">
-        <button id="toggleAdmin" class="btn btn-small">Admin</button>
-      </div>
+      <h1>Formulario</h1>
     </header>
 
-    <!-- ID BANNER -->
-    <div id="idBanner" class="banner"></div>
-
-    <!-- MAIN VIEW: FORM -->
-    <main id="mainView">
+    <main>
       <div class="card">
         <h2>Ingresa tus datos</h2>
         <form id="formDatos">
@@ -34,20 +26,6 @@
         <h2>✅ Datos guardados</h2>
         <p id="resultMsg"></p>
         <p class="muted">Recibirás la confirmación por WhatsApp.</p>
-      </div>
-    </main>
-
-    <!-- ADMIN VIEW -->
-    <main id="adminView" class="hidden">
-      <div class="card">
-        <h2>Panel Administrativo</h2>
-        <div class="admin-controls">
-          <input type="text" id="searchId" placeholder="Buscar por ID...">
-          <button id="refreshAdmin" class="btn btn-small">Actualizar</button>
-        </div>
-        <div id="adminContent">
-          <p class="muted">Presiona "Actualizar" para cargar los datos.</p>
-        </div>
       </div>
     </main>
   </div>

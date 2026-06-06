@@ -9,49 +9,31 @@ body {
   background: #f0f2f5;
   color: #1a1a1a;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #app {
-  max-width: 680px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 480px;
   padding: 16px;
 }
 
-/* HEADER */
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
   margin-bottom: 20px;
-  padding: 16px 0;
 }
 
 header h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
-/* BANNER */
-.banner {
-  background: #e8f4fd;
-  border: 1px solid #b3d8f0;
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-size: 0.85rem;
-  margin-bottom: 16px;
-  word-break: break-all;
-}
-
-.banner.empty {
-  background: #fff3cd;
-  border-color: #ffc107;
-}
-
-/* CARDS */
 .card {
   background: #fff;
   border-radius: 12px;
-  padding: 20px;
+  padding: 24px;
   margin-bottom: 16px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
@@ -68,9 +50,9 @@ header h1 {
 .muted {
   color: #888;
   font-size: 0.9rem;
+  margin-top: 8px;
 }
 
-/* FORM */
 .form-group {
   margin-bottom: 14px;
 }
@@ -102,7 +84,6 @@ header h1 {
   box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
 }
 
-/* BUTTONS */
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -111,7 +92,6 @@ header h1 {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  text-decoration: none;
   text-align: center;
   transition: opacity 0.2s;
 }
@@ -127,97 +107,9 @@ header h1 {
   margin-top: 4px;
 }
 
-.btn-small {
-  background: #e9ecef;
-  color: #333;
-  padding: 6px 14px;
-  font-size: 0.8rem;
-}
-
-.btn-danger {
-  background: #dc3545;
-  color: #fff;
-  padding: 6px 14px;
-  font-size: 0.8rem;
-}
-
-.btn-wa {
-  background: #25d366;
-  color: #fff;
-  width: 100%;
-  margin-top: 12px;
-}
-
-/* ADMIN */
-.admin-controls {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.admin-controls input {
-  flex: 1;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
-
-.admin-card {
-  background: #f8f9fa;
-  border-radius: 8px;
-  padding: 12px 14px;
-  margin-bottom: 10px;
-  border-left: 3px solid #007bff;
-}
-
-.admin-card .admin-id {
-  font-weight: 700;
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-  word-break: break-all;
-}
-
-.admin-card .admin-registro {
-  font-size: 0.85rem;
-  color: #555;
-  padding: 6px 0;
-  border-bottom: 1px solid #e9ecef;
-}
-
-.admin-card .admin-registro:last-child {
-  border-bottom: none;
-}
-
-.admin-card .admin-actions {
-  margin-top: 8px;
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-/* SPINNER */
-.spinner {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 3px solid #e9ecef;
-  border-top-color: #007bff;
-  border-radius: 50%;
-  animation: spin 0.6s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* RESPONSIVE */
 @media (max-width: 480px) {
   #app {
     padding: 12px;
-  }
-  header h1 {
-    font-size: 1.15rem;
   }
   .card {
     padding: 16px;
