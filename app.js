@@ -77,14 +77,8 @@ function renderForm() {
 function mostrarResultado(id, data, timestamp) {
   const card = $('#resultCard');
   const msg = $('#resultMsg');
-  const link = $('#waLink');
 
-  const lineas = CAMPOS.map(c => `• ${c.label}: ${data[c.id] || '(sin dato)'}`).join('\n');
   msg.textContent = `Registrado el ${timestamp}`;
-
-  const texto = `Hola! Tus datos fueron registrados:\n${lineas}`;
-  link.href = `https://wa.me/${id}?text=${encodeURIComponent(texto)}`;
-
   $('#formDatos').reset();
   card.classList.remove('hidden');
   card.scrollIntoView({ behavior: 'smooth' });
