@@ -1,3 +1,6 @@
+[![Licencia](https://img.shields.io/github/license/LozanoTH/websites)](LICENSE)
+[![Lenguaje](https://img.shields.io/github/languages/top/LozanoTH/websites)](https://github.com/LozanoTH/websites)
+
 # Guía Completa para Crear Webs Compatibles con Websites
 
 ## Introducción
